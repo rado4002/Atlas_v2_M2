@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas · Your work, in motion</title>
+<link rel="stylesheet" href="/static/styles.css">
+<script src="/static/app.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#today"><span class="brand-mark">A<span>✳</span></span><span><strong>Atlas</strong><small>PERSONAL WORKSPACE</small></span></a>
+    <div class="sidebar-section">WORKSPACE</div>
+    <nav id="navigation">
+      <button data-view="today" class="nav-item active"><span class="nav-glyph">⌂</span> Today</button>
+      <button data-view="workspaces" class="nav-item"><span class="nav-glyph">▦</span> Workspaces</button>
+      <button data-view="library" class="nav-item"><span class="nav-glyph">▤</span> Library</button>
+      <button data-view="data" class="nav-item"><span class="nav-glyph">◎</span> Data & backup</button>
+    </nav>
+    <div class="sidebar-section">QUICK ACCESS</div>
+    <div id="workspace-shortcuts" class="shortcuts"></div>
+    <button class="sidebar-add" data-action="new-workspace">+ New workspace</button>
+    <div class="sidebar-bottom"><div class="offline-dot"></div><span>Local-first · No AI API</span><small>v2 / M1</small></div>
+  </aside>
+  <div class="main-area">
+    <header class="topbar"><div class="breadcrumbs"><span>ATLAS</span><span class="crumbsep">/</span><strong id="current-breadcrumb">Today</strong></div><div class="top-actions"><span id="server-state">Connecting…</span><button class="top-cta" data-action="new-workspace">+ New workspace</button></div></header>
+    <main id="main" tabindex="-1"><div class="loading">Opening your workspace…</div></main>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="overlay" class="overlay hidden" aria-modal="true" role="dialog"><div id="dialog" class="dialog"></div></div>
+</body>
+</html>
